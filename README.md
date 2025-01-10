@@ -67,6 +67,59 @@ Ensuring that dates are consistently formatted across different parts of the app
 
 Implementing a flexible filter mechanism that supports various combinations of filter criteria without affecting performance.
 
+
+
+# Screen Shorts 
+
+## project title:
+![name](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/filename.png)
+
+## Dashboard:
+![Dashboard](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/MainPage.png)
+![Dashboard2](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/mainpage2.png)
+## Calender And Form:
+![calender](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/AllocatedDate.png)
+![form](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/CalenderandForm.png)
+## Add Schedule:
+![add](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/added.png)
+
+## Update Schedule
+![update](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/update.png)
+
+## Form Buttons
+![button](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/formBtns.png)
+## Delete Schedule:
+![delete](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/delete.png)
+## Update Schedule"
+![update](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/updatemsg.png)
+## Date Popup
+![image](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/Date.png)
+
+## Filters :
+### Filter with Date
+![Date](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/filterwithDate.png)
+ ### Filter with Interviewer
+ ![interviewer](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/interviewer.png)
+### Filter with Candidate Name
+![candidate](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/candidate.png)
+
+## Schedules 
+![schedule](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/schedules.png)
+### Mutiple Schedules
+![multi](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/multiple.png)
+
+# Mobile View (Responsive Designs):
+### main Page
+![mobileMain](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/mobilemain.png)
+
+### calender
+![calender](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/mobilecal.png)
+
+### Mobile Form
+![mobileForm](https://github.com/santhosh2003-bit/InterviewSchedular/blob/main/src/screenshorts/mobileform.png)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
