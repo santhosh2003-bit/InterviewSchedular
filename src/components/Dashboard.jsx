@@ -3,8 +3,10 @@ import { useInterviewContext } from "../context/InterviewContext";
 import { Link } from "react-router-dom";
 import { MdInterpreterMode } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
+import dayjs from "dayjs";
 const Dashboard = () => {
   const { interviews, deleteInterview } = useInterviewContext();
+  const [deletePopup, setDeletePopup] = useState(false);
   const [filter, setFilter] = useState({
     date: "",
     interviewer: "",
@@ -15,8 +17,14 @@ const Dashboard = () => {
     setFilter({ ...filter, [e.target.name]: e.target.value });
   };
   const filteredInterviews = interviews.filter((interview) => {
+    const filteredInterviewDate = dayjs(interview.date)
+      .format("DD-MM-YYYY")
+      .toString();
+
+    const f = dayjs(filter.date).format("DD-MM-YYYY");
+
     return (
-      (!filter.date || interview.date === filter.date) &&
+      (!filter.date || filteredInterviewDate === f) &&
       (!filter.interviewer ||
         interview.interviewer.includes(filter.interviewer)) &&
       (!filter.candidate || interview.candidate.includes(filter.candidate))
@@ -136,7 +144,10 @@ const Dashboard = () => {
                         </Link>
                         <button
                           className="bg-red-600 px-3 py-1 rounded-md"
-                          onClick={() => deleteInterview(interview.id)}
+                          onClick={() => {
+                            deleteInterview(interview.id);
+                            setDeletePopup(true);
+                          }}
                         >
                           Delete
                         </button>
@@ -149,6 +160,21 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      {deletePopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white w-fit p-4 flex flex-col gap-4 rounded-lg">
+            <h1 className="text-xl font-bold text-black">
+              Successfully Deleted Scheduled Interview
+            </h1>
+            <button
+              onClick={() => setDeletePopup(false)}
+              className="px-2 py-1 bg-green-500 rounded-md"
+            >
+              Done
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

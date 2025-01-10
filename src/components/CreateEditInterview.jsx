@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 const CreateEditInterview = () => {
   const { addInterview, updatedInterview, interviews } = useInterviewContext();
+
   const [form, setForm] = useState({
     candidate: "",
     interviewer: "",
@@ -19,7 +20,7 @@ const CreateEditInterview = () => {
     }
   }, [id, interviews]);
   const handleChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setForm({ ...form, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
