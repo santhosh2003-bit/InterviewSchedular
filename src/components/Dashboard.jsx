@@ -163,7 +163,7 @@ const Dashboard = () => {
       {deletePopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white w-fit p-4 flex flex-col gap-4 rounded-lg">
-            <h1 className="text-xl font-bold text-black">
+            <h1 className="text-xl font-bold text-black text-center">
               Successfully Deleted Scheduled Interview
             </h1>
             <button

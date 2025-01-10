@@ -14,6 +14,7 @@ const Calender = () => {
   const [hoveredDate, setHoveredDate] = useState(null);
   const [hoveredEvent, setHoveredEvent] = useState(null);
   const [addPopup, setAddPopup] = useState(false);
+  const [editPopup, setEditPopup] = useState(false);
   const [form, setForm] = useState({
     candidate: "",
     interviewer: "",
@@ -44,8 +45,10 @@ const Calender = () => {
     if (!select.toDate().toDateString()) {
       return alert("Please select a date");
     }
-    if (id) updatedInterview(id, form);
-    else {
+    if (id) {
+      updatedInterview(id, form);
+      setEditPopup(true);
+    } else {
       addInterview({ ...form, id: Date.now().toString() });
       setAddPopup(true);
     }
@@ -236,11 +239,26 @@ const Calender = () => {
       {addPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white w-fit p-4 flex flex-col gap-4 rounded-lg">
-            <h1 className="text-xl font-bold">
+            <h1 className="text-xl font-bold text-center">
               Successfully Added Scheduled Interview
             </h1>
             <button
               onClick={() => setAddPopup(false)}
+              className="px-2 py-1 bg-green-500 rounded-md"
+            >
+              Done
+            </button>
+          </div>
+        </div>
+      )}
+      {editPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white w-fit p-4 flex flex-col gap-4 rounded-lg">
+            <h1 className="text-xl font-bold text-center">
+              Successfully Edit Scheduled Interview
+            </h1>
+            <button
+              onClick={() => setEditPopup(false)}
               className="px-2 py-1 bg-green-500 rounded-md"
             >
               Done

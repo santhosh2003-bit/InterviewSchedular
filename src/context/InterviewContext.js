@@ -25,7 +25,6 @@ export const InterviewProvider = ({ children }) => {
       "interviews",
       JSON.stringify([...interviews, interview])
     );
-    console.log(interviews);
   };
   const updatedInterview = (id, updatedInterview) => {
     const updatedInterviews = interviews.map((interview) =>
