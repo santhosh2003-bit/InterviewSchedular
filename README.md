@@ -1,3 +1,72 @@
+# Interview Scheduler
+Users can manage interviews by filtering by date, interviewer, and candidate with this project's interview scheduling application. The application provides an easy-to-use interface for scheduling interviews and was developed with the help of contemporary web technology.
+
+## Table of Contents
+Features
+Setup Instructions
+
+Design Decisions
+
+Assumptions
+
+Challenges Faced
+
+Screenshots
+
+## Qualities
+View, edit, add, and remove interviews.
+
+### Sort interviews according to: 
+Date (in the format ddd MMM DD YYYY).
+
+interviewer.
+
+candidate.
+
+design that adapts to various screen sizes.
+
+User-friendly interface
+## Setup Instructions
+
+### Prerequisites
+Ensure you have the following installed:
+
+Node.js (version 16 or later)
+
+npm (Node Package Manager)
+
+Git
+## Design Decisions: 
+
+### Date Filtering:
+
+The date filtering feature uses the dayjs library to format and compare dates consistently in the format ddd MMM DD YYYY.
+
+## State Management:
+
+State is managed using React’s built-in useState and useEffect hooks to ensure a smooth user experience.
+
+## Styling:
+Tailwind CSS is used for styling to ensure a clean and consistent design, along with easy responsiveness.
+
+## Filtering Logic:
+
+The filtering logic allows for partial or full filtering based on the provided inputs (date, interviewer, candidate).
+## Assumptions
+All interview data is provided in a consistent format (e.g., date strings are valid ISO format).
+
+Filtering by date matches exactly based on the specified format (Wed Jan 22 2025).
+
+If no filter criteria are provided, all interviews are displayed.
+## Challenges Faced
+### Date Handling:
+
+Ensuring that dates are consistently formatted across different parts of the application required careful use of the dayjs library.
+
+## Dynamic Filtering:
+
+Implementing a flexible filter mechanism that supports various combinations of filter criteria without affecting performance.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
