@@ -73,7 +73,7 @@ const Calender = () => {
   return (
     <div className="bg_color h-screen flex justify-center items-center ">
       <div className="flex md:flex-row flex-col md:divide-x-2 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] ">
-        <div className="w-96 h-100  px-3 py-3 pt-10 md:pt-3  text-white rounded-md">
+        <div className="w-96 h-100  px-3 py-3 pt-10 md:pt-3  text-white rounded-md mt-52 md:mt-0">
           <div className="flex justify-between items-center">
             <h1>
               {months[today.month()]} , {today.year()}
